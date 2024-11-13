@@ -25,12 +25,6 @@ gsap.utils.toArray(".scroll-image").forEach((image, i) => {
 
 
 
-VanillaTilt.init(document.querySelectorAll(".tilt-box"), {
-  max: 25, // Maximum tilt angle (degree)
-  speed: 300, // Speed of the transition
-  glare: true, // Adds glare effect
-  "max-glare": 0.5 // Maximum opacity of the glare effect
-});
 
 
 
@@ -45,3 +39,12 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+
+
+
+VanillaTilt.init(document.querySelector(".tilt-box"), {
+  max: 25,     // maximum tilt angle
+  speed: 300,  // animation speed
+  glare: true, // glare effect
+  "max-glare": 0.5 // max glare opacity
+});
