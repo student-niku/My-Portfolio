@@ -79,3 +79,16 @@ VanillaTilt.init(document.querySelector(".tilt-box"), {
   glare: true, // glare effect
   "max-glare": 0.5 // max glare opacity
 });
+
+let manuIcon  = document.querySelector("#click");
+let closeMenuIcon =document.querySelector(".close-icon");
+let linksDiv  = document.querySelector(".links-div");
+
+manuIcon.addEventListener("click", function () {
+  linksDiv.style.display = "block";  // ya "flex" bhi kar sakte ho
+});
+
+// Close hone par
+closeMenuIcon.addEventListener("click", function () {
+  linksDiv.style.display = "none";
+});
