@@ -180,3 +180,61 @@ footer .media  a{
     width:500px;
     line-height: 20px;
   }
+
+  .overlay {
+    position: fixed;
+    padding: 20px;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Popup box */
+  .popup {
+    background: #fff;
+    padding: 10px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    position: relative;
+    width: 300px;
+  }
+
+  .popup h2 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .popup input {
+    width:93%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .popup button {
+    width: 97%;
+    padding: 10px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .popup button:hover {
+    background: #0056b3;
+  }
+
+  /* Close button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+  }

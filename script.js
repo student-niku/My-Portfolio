@@ -1,5 +1,36 @@
 
+window.onload = function () {
+  document.getElementById("overlay").style.display = "flex";
+};
 
+// Close popup
+document.getElementById("closeBtn").onclick = function () {
+  document.getElementById("overlay").style.display = "none";
+};
+
+document.getElementById("myForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: e.target.name.value,
+    email: e.target.email.value,
+    number: e.target.number.value
+  };
+
+  const response = await fetch("https://formspree.io/f/xdkdvapy", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  });
+
+  if (response.ok) {
+    alert("Form submitted successfully!");
+  document.getElementById("overlay").style.display = "none";
+
+  } else {
+    alert("Form submission failed!");
+  }
+});
 var typed = new Typed('#element', {
   strings: ['Web Developer', 'Web Designer','Web AI Developer','AI Ms-Office'],
   typeSpeed: 100,
