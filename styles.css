@@ -242,10 +242,10 @@ footer .media  a{
   .manu-div{
     /* background-color:   blue; */
     z-index: 9999;
-    position: absolute;
+    position: fixed;
     top: 80px;
-    width: 90px;
-    right: 50px;
+    right: 100px;
+
 
   }
 .links-div{
@@ -254,7 +254,7 @@ footer .media  a{
   position: absolute;
   right: 50px;
   top: 5px;
-  display: ;
+  display: none;
 }
 .links{
   display: flex;
@@ -268,4 +268,22 @@ footer .media  a{
 .close-icon button{
   border: none;
   left: 5px;
+  background:none;
+  color: #fff;
+}
+#click{
+  background-color: none;
+  border: none;
+  background: none;
+  color: #fff;
+}
+@media (max-width:500px) {
+  .manu-div{
+    z-index: 9999;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+
+
+  }
 }
